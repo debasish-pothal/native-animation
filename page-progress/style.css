@@ -1,0 +1,30 @@
+.progress-indicator {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10px;
+  background-color: #7b4ed4;
+  transform-origin: 0 50%;
+  z-index: 10;
+  animation: progress 1s linear forwards;
+  animation-timeline: scroll();
+}
+
+.content {
+  height: 2000px;
+  background: linear-gradient(to bottom, #f0f0f0, #d0d0d0);
+
+  p {
+    padding: 20px;
+  }
+}
+
+@keyframes progress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
