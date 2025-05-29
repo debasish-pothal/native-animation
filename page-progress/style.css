@@ -1,3 +1,8 @@
+body {
+  background: #181824;
+  color: #f0f0f0;
+}
+
 .progress-indicator {
   position: fixed;
   top: 0;
@@ -13,7 +18,7 @@
 
 .content {
   height: 2000px;
-  background: linear-gradient(to bottom, #f0f0f0, #d0d0d0);
+  background: linear-gradient(to bottom, #23243a, #181824);
 
   p {
     padding: 20px;
