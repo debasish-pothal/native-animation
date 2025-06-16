@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+.content {
+  padding-top: 1em;
+  margin: 0 auto 0;
+  width: 80vw;
+  max-width: 60em;
+}
+
+.sticky-parallax-header {
+  background-image: url(./background.jpg);
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: 50% 50%;
+  place-items: center;
+  display: grid;
+  color: #fff;
+  font-size: calc(4vw + 1em);
+  font-weight: 900;
+  background-blend-mode: soft-light;
+}
+
+@supports (animation-range: 0vh 90vh) {
+  @keyframes sticky-parallax-header-move-and-size {
+    from {
+      background-position: 50% 0;
+    }
+    to {
+      background-position: 50% 100%;
+      background-color: #0b1584;
+      height: 10vh;
+      font-size: 2em;
+    }
+  }
+
+  body {
+    padding-top: 100vh;
+  }
+
+  .sticky-parallax-header {
+    position: fixed;
+    top: 0;
+
+    animation: sticky-parallax-header-move-and-size linear forwards;
+    animation-timeline: scroll();
+    animation-range: 0vh 90vh;
+  }
+}
